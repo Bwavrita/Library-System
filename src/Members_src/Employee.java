@@ -1,10 +1,12 @@
 package Members_src;
 
-public class Employer extends People{
+import Excpetion.CpfIncorrect;
+
+public class Employee extends People{
     private String sector;
     private double salary;
 
-    public Employer(String cpf, String name, String old,String sector,double salary) {
+    public Employee(String cpf, String name, String old,String sector,double salary) throws CpfIncorrect {
         super(cpf, name, old);
         this.sector = sector;
         this.salary = salary;

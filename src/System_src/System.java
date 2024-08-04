@@ -4,14 +4,15 @@ import java.util.ArrayList;
 
 import Books_src.Book;
 import Members_src.Client;
-import Members_src.Employer;
+import Members_src.Employee;
 
 public class System implements SystemInterface {
+
     @SuppressWarnings("unused")
     private ArrayList<Book> bookList = new ArrayList<>();
 
     @Override
-    public Boolean withdrawBook() {
+    public Boolean borrowBook() {
         return false;
     }
 
@@ -41,7 +42,7 @@ public class System implements SystemInterface {
     }
 
     @Override
-    public Boolean registerEmployer(Employer employee) {
+    public Boolean registerEmployer(Employee employee) {
         throw new UnsupportedOperationException("Unimplemented method 'registerEmployer'");
     }
 
@@ -51,7 +52,7 @@ public class System implements SystemInterface {
     }
 
     @Override
-    public Employer verifyEmployer(String name) {
+    public Employee verifyEmployer(String name) {
         throw new UnsupportedOperationException("Unimplemented method 'verifyEmployer'");
     }
 
