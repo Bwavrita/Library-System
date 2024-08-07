@@ -8,11 +8,17 @@ public class Book {
     private Date publicationDate;
     private Boolean available = true;
     
+    public Book(String tittle, String author) {
+        this.tittle = tittle;
+        this.author = author;
+    }
+
     public Book(String tittle, String author, Date publicationDate) {
         this.tittle = tittle;
         this.author = author;
         this.publicationDate = publicationDate;
     }
+    
     public String getTittle() {
         return tittle;
     }
@@ -39,6 +45,14 @@ public class Book {
             this.available = false;
         }else{
             this.available = true;
+        }
+    }
+
+    public Boolean equals(Book book){
+        if(getTittle().equals(book.getTittle())){
+            return true;
+        }else{
+            return false;
         }
     }
     

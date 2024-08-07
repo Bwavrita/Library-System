@@ -5,14 +5,13 @@ import Excpetion.CpfIncorrect;
 public class People{
     private String cpf;
     private String name;
-    private String old;
+    private int old;
     
-    public People(String cpf, String name, String old)throws CpfIncorrect {
+    public People(String cpf, String name)throws CpfIncorrect {
         this.cpf = cpf;
         this.name = name;
-        this.old = old;
         if(verifyCpf(cpf)){
-            throw new CpfIncorrect();
+            throw new CpfIncorrect();//Verificar sobre o CPF
         }
     }
     public String getCpf() {
@@ -27,10 +26,10 @@ public class People{
     public void setName(String name) {
         this.name = name;
     }
-    public String getOld() {
+    public int getOld() {
         return old;
     }
-    public void setOld(String old) {
+    public void setOld(int old) {
         this.old = old;
     }
     public Boolean verifyCpf(String cpf){
@@ -71,8 +70,8 @@ public class People{
         return firstVerify.equals(cpfFirstVerify) && secVerify.equals(cpfSecVerify);
     }
 
-    public Boolean equals(String cpf){
-        if(getCpf().equals(cpf)){
+    public Boolean equals(People people){
+        if(getCpf().equals(people.getCpf())){
             return true;
         }else{
             return false;

@@ -8,15 +8,16 @@ import Members_src.Employee;
 
 public interface SystemInterface {
 
-    public Boolean borrowBook();
-    public Boolean registerBook();
+    public Boolean borrowBook(String tittle,String cpf);
+    public Boolean registerBook(Book book);
     public int registeredBooks();
-    public Book searchBook(String title);
+    public Book searchBook(String tittle);
     public ArrayList<Book> searchAuthor(String author);
     public ArrayList<Book> searchBooksAvailable();
     public Boolean registerEmployer(Employee employee);
-    public Boolean registerCliente(Client member);
-    public Employee verifyEmployer(String name);
-    public Client verifyClient(String name);
-    public ArrayList<Client> verifyClientOwes(Client client);
+    public Boolean registerClient(Client member);
+    public Employee verifyEmployer(String cpf);
+    public Client verifyClient(String cpf);
+    public ArrayList<Book> verifyClientOwes(Client client);
+    public ArrayList<Client> getAllClients();
 }   

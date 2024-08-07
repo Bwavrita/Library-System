@@ -7,7 +7,7 @@ public class Employee extends People{
     private double salary;
 
     public Employee(String cpf, String name, String old,String sector,double salary) throws CpfIncorrect {
-        super(cpf, name, old);
+        super(cpf, name);
         this.sector = sector;
         this.salary = salary;
     }
