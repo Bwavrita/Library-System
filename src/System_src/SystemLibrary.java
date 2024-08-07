@@ -19,6 +19,7 @@ public class SystemLibrary implements SystemInterface {
         try {
             Book book = dataBase.getBook(title);
             if (book.getAvailable()) {
+                System.out.println("Passou aqui");
                 book.setAvailable();
                 Client client = dataBase.getClient(cpf);
                 client.borrowBook(book);

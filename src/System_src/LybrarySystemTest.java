@@ -56,7 +56,7 @@ public class LybrarySystemTest {
                         String clientName = scanner.nextLine();
                         System.out.print("Enter client CPF: ");
                         String clientCpf = scanner.nextLine();
-                        Client client = new Client(clientName, clientCpf);
+                        Client client = new Client(clientCpf, clientName);
                         if (systemLibrary.registerClient(client)) {
                             System.out.println("Client registered successfully.");
                         } else {
@@ -72,9 +72,7 @@ public class LybrarySystemTest {
                     String searchTitle = scanner.nextLine();
                     Book foundBook = systemLibrary.searchBook(searchTitle);
                     if (foundBook != null) {
-                        System.out.println("Book found: " + foundBook.getTittle() + " by " + foundBook.getAuthor());
-                    } else {
-                        System.out.println("Book not found.");
+                        System.out.println("Book found: " + foundBook.getTittle() + " by " + foundBook.getAuthor() + "  " + foundBook.getAvailable());
                     }
                     break;
 
